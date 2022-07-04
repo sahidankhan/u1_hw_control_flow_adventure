@@ -1,6 +1,5 @@
 
-const startGame = (adventureGame) => {}
-
+const startGame = () => {
 let adventureName = prompt(`Hello travler! What is your name?`)
 console.log(adventureName)
 
@@ -47,7 +46,7 @@ const choice2 = prompt(`Once you made it through the forest, you found yourself 
  switch(choice2){
     case direction2[0]: alert(`You ran through the webs, alerting the spiders! You got hurt, but made it to the other side.`)
     break;
-    case direction2[1]: alert(`You took your time through the webs and foun 2 Gold Pieces! You make it to the other side.`)
+    case direction2[1]: alert(`You took your time through the webs and found 2 Gold Pieces! You make it to the other side.`)
  }
 // if(choice2 == direction2[0]){
 //     alert(`You ran through the webs, alerting the spiders! You got hurt, but made it to the other side.`)
@@ -77,22 +76,18 @@ switch(choice4){
     break;
     case direction4[2]: alert(`You offered the Goblin King the gold you collected throughout your journey if he agreed to leave and never come back. Entranced by the shiny gold pieces, the Goblin King returned to the Forbidden Forest a little richer. `)
 }
-// if(choice3 == direction3[0]){
-//     alert(`You use the weapon given to you by the Adventure's Guild to defeat the Goblin King! You gained 10 Gold Pieces as loot.`)
-// }else if(choice3 == direction3[1]){
-//     alert(`Scared out of your mind, you ran from the Goblin King and left the country. Maybe adventures weren't made for you.`)
-// }else if(choice3 == direction3[2]){
-//     alert(`You offered the Goblin King the gold you collected throughout your journey if he agreed to leave and never come back. Entranced by the shiny gold pieces, the Goblin King returned to the Forbidden Forest a little richer. `)
-// }
 
-let itsOver = true 
-    prompt(`That's all folks! Wanna play again(Y/N)?`)
-let direction5 = [`yes`,`no`]
+let choice5 = prompt(`Would you like to try again dear adventurer? Y/N`)
+let direction5 = [`Y`,`N`]
 
-if(itsOver == direction5[0]){
-    startgame()
-}else if(itsOver == direction5[1]){
-    alert(`Thanks for playing!`)
+switch(choice5){
+ case direction5[0] : startGame()
+ break;
+ case direction5[1] : prompt(`Thanks for playing`)
+
 }
+}
+
+startGame()
 
 
